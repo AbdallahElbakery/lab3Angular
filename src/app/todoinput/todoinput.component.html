@@ -1,0 +1,21 @@
+<div class="container mb-4 p-3 bg-white rounded shadow-sm">
+  <div class="input-group">
+    <input 
+      type="text" 
+      class="form-control" 
+      placeholder="Add new task..."
+      #taskInput
+      (keyup.enter)="addTask(taskInput.value); taskInput.value=''">
+    
+    <button 
+      class="btn btn-primary" 
+      type="button"
+      (click)="addTask(taskInput.value); taskInput.value=''">
+      <i class="bi bi-plus-circle"></i> Add
+    </button>
+  </div>
+  
+  <div *ngIf="errorMessage" class="alert alert-danger mt-2 mb-0">
+    {{ errorMessage }}
+  </div>
+</div>

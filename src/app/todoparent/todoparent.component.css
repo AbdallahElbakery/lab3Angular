@@ -1,0 +1,35 @@
+/* أنماط جديدة مع تأثيرات حديثة */
+.todo-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.todo-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.todo-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.todo-list-container {
+  margin-top: 1.5rem;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 1.5rem;
+}
+
+/* تأثيرات للعناصر الفرعية */
+:host ::ng-deep app-todo-input {
+  width: 100%;
+}
+
+:host ::ng-deep app-todo-list {
+  display: block;
+  margin-top: 1rem;
+}

@@ -1,0 +1,11 @@
+<div class="container mt-4 p-4 bg-light rounded-3 shadow">
+  <apptodoinput (add)="addTodo($event)"></apptodoinput>
+  
+  <div class="mt-4 pt-3 border-top">
+    <apptodolist 
+      [todos]="todos"
+      (delete)="deleteTodo($event)"
+      (toggle)="toggleCompleted($event)">
+    </apptodolist>
+  </div>
+</div>
